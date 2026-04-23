@@ -1,13 +1,23 @@
+// base = доход при 12ч × 28 дней (максимальная нагрузка)
+// Москва: ~250 000, остальные пропорционально
 export const REGIONS = [
-  { name: "Москва", base: 95000 },
-  { name: "Петербург", base: 82000 },
-  { name: "Краснодар", base: 68000 },
-  { name: "Екатеринбург", base: 74000 },
-  { name: "Казань", base: 70000 },
-  { name: "Новосибирск", base: 72000 },
-  { name: "Ростов", base: 66000 },
-  { name: "Нижний Новгород", base: 68000 },
+  { name: "Москва",         base: 250000 },
+  { name: "Петербург",      base: 215000 },
+  { name: "Краснодар",      base: 175000 },
+  { name: "Екатеринбург",   base: 190000 },
+  { name: "Казань",         base: 180000 },
+  { name: "Новосибирск",    base: 185000 },
+  { name: "Ростов",         base: 170000 },
+  { name: "Нижний Новгород", base: 175000 },
 ];
+
+// Коэффициенты платформ относительно base
+export const PLATFORMS = [
+  { id: "yandex",   label: "Яндекс Еда",  mult: 1.0,  color: "#F5620F", bg: "#FFF4EE" },
+  { id: "vkusvill", label: "ВкусВилл",    mult: 0.88, color: "#2DB356", bg: "#EDF9F1" },
+] as const;
+
+export type PlatformId = typeof PLATFORMS[number]["id"];
 
 export const ADVANTAGES = [
   {
