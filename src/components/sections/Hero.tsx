@@ -49,7 +49,7 @@ export function HeroSection() {
 
           <h1 className="font-display text-6xl lg:text-7xl font-bold text-brand-dark leading-[0.95] tracking-tight animate-fade-up delay-100">
             ЗАРАБАТЫВАЙ<br />
-            <span className="text-brand-orange">ОТ 80 000 ₽</span><br />
+            <span className="text-brand-orange">ОТ 120 000 ₽</span><br />
             В МЕСЯЦ
           </h1>
 
@@ -58,13 +58,22 @@ export function HeroSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-up delay-300">
-            <button className="bg-brand-orange text-white font-bold text-base px-8 py-4 rounded-2xl hover:bg-orange-600 transition-all duration-200 hover:scale-105 shadow-lg shadow-orange-200">
-              Стать курьером бесплатно
-            </button>
-            <button className="flex items-center justify-center gap-2 text-brand-dark font-semibold text-base px-6 py-4 rounded-2xl border-2 border-gray-200 hover:border-brand-orange/40 transition-colors">
-              <Icon name="Play" size={18} className="text-brand-orange" />
-              Как это работает
-            </button>
+            <a
+              href="https://courier.eats.yandex.ru/courier-landing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 bg-brand-orange text-white font-bold text-base px-8 py-4 rounded-2xl hover:bg-orange-600 transition-all duration-200 hover:scale-105 shadow-lg shadow-orange-200"
+            >
+              Яндекс Еда
+            </a>
+            <a
+              href="https://partner.vkusvill.ru/courier"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 bg-brand-green text-white font-bold text-base px-8 py-4 rounded-2xl hover:bg-green-600 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-200"
+            >
+              ВкусВилл
+            </a>
           </div>
 
           <div className="flex gap-8 pt-4 animate-fade-up delay-400">

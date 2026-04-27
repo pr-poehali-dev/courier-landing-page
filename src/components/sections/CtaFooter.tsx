@@ -12,14 +12,32 @@ export function CtaSection() {
             <p className="text-gray-400 text-lg mb-8 max-w-md mx-auto">
               Присоединяйся к 15 000+ курьеров по всей России. Первые деньги — уже завтра.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-brand-orange text-white font-bold text-base px-10 py-4 rounded-2xl hover:bg-orange-500 transition-all hover:scale-105 shadow-xl shadow-orange-900/30">
-                Стать курьером бесплатно
-              </button>
-              <button className="flex items-center justify-center gap-2 text-white font-semibold text-base px-8 py-4 rounded-2xl border-2 border-white/20 hover:border-white/40 transition-colors">
-                <Icon name="MessageCircle" size={18} />
-                Задать вопрос
-              </button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-4">
+              <a
+                href="https://courier.eats.yandex.ru/courier-landing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 bg-brand-orange text-white font-bold text-base px-10 py-4 rounded-2xl hover:bg-orange-500 transition-all hover:scale-105 shadow-xl shadow-orange-900/30"
+              >
+                Зарегистрироваться в Яндекс Еде
+              </a>
+              <a
+                href="https://partner.vkusvill.ru/courier"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 bg-brand-green text-white font-bold text-base px-10 py-4 rounded-2xl hover:bg-green-500 transition-all hover:scale-105 shadow-xl shadow-green-900/30"
+              >
+                Зарегистрироваться во ВкусВилл
+              </a>
+            </div>
+            <div className="flex justify-center">
+              <a
+                href="#faq"
+                className="inline-flex items-center justify-center gap-2 text-white font-semibold text-base px-8 py-4 rounded-2xl border-2 border-white/20 hover:border-white/40 transition-colors"
+              >
+                <Icon name="HelpCircle" size={18} />
+                Часто задаваемые вопросы
+              </a>
             </div>
           </div>
         </div>

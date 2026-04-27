@@ -110,7 +110,7 @@ export function CalculatorSection() {
 
             {/* Region */}
             <div>
-              <label className="font-semibold text-white text-sm mb-3 block">Регион работы</label>
+              <label className="font-semibold text-white text-sm mb-3 block">Основные регионы работы</label>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                 {REGIONS.map((r, i) => (
                   <button
@@ -170,7 +170,7 @@ export function CalculatorSection() {
               className="rounded-3xl p-8 flex-1 flex flex-col justify-center text-center transition-all duration-300"
               style={{ backgroundColor: platform.color }}
             >
-              <div className="text-white/70 text-sm font-medium mb-2">Ваш доход в месяц</div>
+              <div className="text-white/70 text-sm font-medium mb-2">Средний доход в месяц</div>
               <div className="font-display text-5xl font-bold text-white mb-1 leading-none">{earnedFormatted}</div>
               <div className="font-display text-3xl font-bold text-white/60 mb-4">₽</div>
               <div className="w-full h-px bg-white/20 mb-4" />
