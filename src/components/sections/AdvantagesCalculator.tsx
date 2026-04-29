@@ -192,12 +192,13 @@ export function CalculatorSection() {
               <div className="text-gray-500 text-xs mt-1">при 12ч × 28 дней</div>
             </div>
 
-            <button
-              className="w-full text-white font-bold text-sm py-4 rounded-2xl transition-colors"
+            <a
+              href="#top"
+              className="block w-full text-center text-white font-bold text-sm py-4 rounded-2xl transition-colors"
               style={{ backgroundColor: platform.color === "#F5620F" ? "#2DB356" : "#F5620F" }}
             >
               Начать зарабатывать →
-            </button>
+            </a>
           </div>
         </div>
       </div>

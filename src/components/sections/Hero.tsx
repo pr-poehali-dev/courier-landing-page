@@ -25,9 +25,9 @@ export function Navbar() {
           <a href="#process" className="hover:text-brand-orange transition-colors">Как начать</a>
           <a href="#faq" className="hover:text-brand-orange transition-colors">FAQ</a>
         </div>
-        <button className="bg-brand-orange text-white font-semibold text-sm px-5 py-2.5 rounded-full hover:bg-orange-600 transition-colors">
+        <a href="#top" className="bg-brand-orange text-white font-semibold text-sm px-5 py-2.5 rounded-full hover:bg-orange-600 transition-colors">
           Стать курьером
-        </button>
+        </a>
       </div>
     </nav>
   );
@@ -59,7 +59,7 @@ export function HeroSection() {
 
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-up delay-300">
             <a
-              href="https://courier.eats.yandex.ru/courier-landing"
+              href="https://trk.ppdu.ru/click/Ux7hwE3U?erid=CQH36pWzJqVGXC5oLP8WVVNCNqJmbhiUPijGiu4zpwPd7G"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-brand-orange text-white font-bold text-base px-8 py-4 rounded-2xl hover:bg-orange-600 transition-all duration-200 hover:scale-105 shadow-lg shadow-orange-200"
@@ -67,7 +67,7 @@ export function HeroSection() {
               Яндекс Еда
             </a>
             <a
-              href="https://partner.vkusvill.ru/courier"
+              href="https://trk.ppdu.ru/click?uid=328338&oid=1248&erid=2SDnjekBvAd&siteId=21430"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-brand-green text-white font-bold text-base px-8 py-4 rounded-2xl hover:bg-green-600 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-200"

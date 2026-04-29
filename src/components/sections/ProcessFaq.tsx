@@ -49,9 +49,9 @@ export function ProcessSection() {
         </div>
 
         <div className={`text-center mt-14 ${inView ? "animate-fade-up delay-500" : "opacity-0"}`}>
-          <button className="bg-brand-orange text-white font-bold text-base px-10 py-4 rounded-2xl hover:bg-orange-600 transition-all duration-200 hover:scale-105 shadow-lg shadow-orange-200">
+          <a href="#top" className="inline-block bg-brand-orange text-white font-bold text-base px-10 py-4 rounded-2xl hover:bg-orange-600 transition-all duration-200 hover:scale-105 shadow-lg shadow-orange-200">
             Подать заявку — это бесплатно
-          </button>
+          </a>
           <p className="text-gray-400 text-sm mt-3">Проверка занимает менее 24 часов</p>
         </div>
       </div>

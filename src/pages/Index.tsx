@@ -5,7 +5,7 @@ import { CtaSection, Footer } from "@/components/sections/CtaFooter";
 
 export default function Index() {
   return (
-    <div className="min-h-screen">
+    <div id="top" className="min-h-screen">
       <Navbar />
       <HeroSection />
       <AdvantagesSection />
