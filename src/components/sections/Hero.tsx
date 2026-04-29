@@ -58,22 +58,28 @@ export function HeroSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-up delay-300">
-            <a
-              href="https://trk.ppdu.ru/click/Ux7hwE3U?erid=CQH36pWzJqVGXC5oLP8WVVNCNqJmbhiUPijGiu4zpwPd7G"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-brand-orange text-white font-bold text-base px-8 py-4 rounded-2xl hover:bg-orange-600 transition-all duration-200 hover:scale-105 shadow-lg shadow-orange-200"
-            >
-              Яндекс Еда
-            </a>
-            <a
-              href="https://trk.ppdu.ru/click?uid=328338&oid=1248&erid=2SDnjekBvAd&siteId=21430"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-brand-green text-white font-bold text-base px-8 py-4 rounded-2xl hover:bg-green-600 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-200"
-            >
-              ВкусВилл
-            </a>
+            <div className="flex flex-col items-center gap-1">
+              <a
+                href="https://trk.ppdu.ru/click/Ux7hwE3U?erid=CQH36pWzJqVGXC5oLP8WVVNCNqJmbhiUPijGiu4zpwPd7G"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 bg-brand-orange text-white font-bold text-base px-8 py-4 rounded-2xl hover:bg-orange-600 transition-all duration-200 hover:scale-105 shadow-lg shadow-orange-200"
+              >
+                Яндекс Еда
+              </a>
+              <span className="text-xs text-gray-400">Реклама · erid: CQH36pWzJqVGXC5oLP8WVVNCNqJmbhiUPijGiu4zpwPd7G</span>
+            </div>
+            <div className="flex flex-col items-center gap-1">
+              <a
+                href="https://trk.ppdu.ru/click?uid=328338&oid=1248&erid=2SDnjekBvAd&siteId=21430"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 bg-brand-green text-white font-bold text-base px-8 py-4 rounded-2xl hover:bg-green-600 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-200"
+              >
+                ВкусВилл
+              </a>
+              <span className="text-xs text-gray-400">Реклама · erid: 2SDnjekBvAd</span>
+            </div>
           </div>
 
           <div className="flex gap-8 pt-4 animate-fade-up delay-400">

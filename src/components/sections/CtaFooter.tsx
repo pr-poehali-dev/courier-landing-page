@@ -12,23 +12,29 @@ export function CtaSection() {
             <p className="text-gray-400 text-lg mb-8 max-w-md mx-auto">
               Присоединяйся к 15 000+ курьеров по всей России. Первые деньги — уже завтра.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-4">
-              <a
-                href="https://trk.ppdu.ru/click/Ux7hwE3U?erid=CQH36pWzJqVGXC5oLP8WVVNCNqJmbhiUPijGiu4zpwPd7G"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-brand-orange text-white font-bold text-base px-10 py-4 rounded-2xl hover:bg-orange-500 transition-all hover:scale-105 shadow-xl shadow-orange-900/30"
-              >
-                Зарегистрироваться в Яндекс Еде
-              </a>
-              <a
-                href="https://trk.ppdu.ru/click?uid=328338&oid=1248&erid=2SDnjekBvAd&siteId=21430"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-brand-green text-white font-bold text-base px-10 py-4 rounded-2xl hover:bg-green-500 transition-all hover:scale-105 shadow-xl shadow-green-900/30"
-              >
-                Зарегистрироваться во ВкусВилл
-              </a>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-2">
+              <div className="flex flex-col items-center gap-1">
+                <a
+                  href="https://trk.ppdu.ru/click/Ux7hwE3U?erid=CQH36pWzJqVGXC5oLP8WVVNCNqJmbhiUPijGiu4zpwPd7G"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 bg-brand-orange text-white font-bold text-base px-10 py-4 rounded-2xl hover:bg-orange-500 transition-all hover:scale-105 shadow-xl shadow-orange-900/30"
+                >
+                  Зарегистрироваться в Яндекс Еде
+                </a>
+                <span className="text-xs text-gray-500">Реклама · erid: CQH36pWzJqVGXC5oLP8WVVNCNqJmbhiUPijGiu4zpwPd7G</span>
+              </div>
+              <div className="flex flex-col items-center gap-1">
+                <a
+                  href="https://trk.ppdu.ru/click?uid=328338&oid=1248&erid=2SDnjekBvAd&siteId=21430"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 bg-brand-green text-white font-bold text-base px-10 py-4 rounded-2xl hover:bg-green-500 transition-all hover:scale-105 shadow-xl shadow-green-900/30"
+                >
+                  Зарегистрироваться во ВкусВилл
+                </a>
+                <span className="text-xs text-gray-500">Реклама · erid: 2SDnjekBvAd</span>
+              </div>
             </div>
             <div className="flex justify-center">
               <a
