@@ -17,6 +17,46 @@ export const PLATFORMS = [
   { id: "vkusvill", label: "ВкусВилл",    mult: 0.88, color: "#2DB356", bg: "#EDF9F1" },
 ] as const;
 
+// Партнёрские ссылки на главном экране
+export const PARTNER_LINKS = [
+  {
+    id: "yandex",
+    brand: "Яндекс Еда",
+    label: "Стать курьером",
+    icon: "🚀",
+    color: "#F5620F",
+    bg: "#FFF4EE",
+    shadowColor: "shadow-orange-200",
+    hoverColor: "hover:bg-orange-600",
+    url: "https://trk.ppdu.ru/click/Ux7hwE3U?erid=CQH36pWzJqVGXC5oLP8WVVNCNqJmbhiUPijGiu4zpwPd7G",
+    erid: "CQH36pWzJqVGXC5oLP8WVVNCNqJmbhiUPijGiu4zpwPd7G",
+  },
+  {
+    id: "vkusvill-bike",
+    brand: "ВкусВилл",
+    label: "Велокурьер",
+    icon: "🚲",
+    color: "#2DB356",
+    bg: "#EDF9F1",
+    shadowColor: "shadow-green-200",
+    hoverColor: "hover:bg-green-600",
+    url: "https://trk.ppdu.ru/click?uid=328338&oid=1248&erid=2SDnjekBvAd&sub1=lending&landingId=73&siteId=21430",
+    erid: "2SDnjekBvAd",
+  },
+  {
+    id: "vkusvill-car",
+    brand: "ВкусВилл",
+    label: "Автокурьер",
+    icon: "🚗",
+    color: "#2DB356",
+    bg: "#EDF9F1",
+    shadowColor: "shadow-green-200",
+    hoverColor: "hover:bg-green-600",
+    url: "https://trk.ppdu.ru/click?uid=328338&oid=1248&erid=2SDnjekBvAd&sub1=lending&siteId=21430",
+    erid: "2SDnjekBvAd",
+  },
+];
+
 export type PlatformId = typeof PLATFORMS[number]["id"];
 
 export const ADVANTAGES = [

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Icon from "@/components/ui/icon";
+import { PARTNER_LINKS } from "@/components/sections/data";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -57,39 +58,28 @@ export function HeroSection() {
             Работа курьером с гибким графиком, быстрыми выплатами и реальной поддержкой. Начни уже сегодня.
           </p>
 
-          <div className="flex flex-wrap gap-4 animate-fade-up delay-300">
-            <div className="flex flex-col items-center gap-1">
-              <a
-                href="https://trk.ppdu.ru/click/Ux7hwE3U?erid=CQH36pWzJqVGXC5oLP8WVVNCNqJmbhiUPijGiu4zpwPd7G"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-brand-orange text-white font-bold text-base px-8 py-4 rounded-2xl hover:bg-orange-600 transition-all duration-200 hover:scale-105 shadow-lg shadow-orange-200"
-              >
-                Яндекс Еда
-              </a>
-              <span className="text-xs text-gray-400">Реклама · erid: CQH36pWzJqVGXC5oLP8WVVNCNqJmbhiUPijGiu4zpwPd7G</span>
-            </div>
-            <div className="flex flex-col items-center gap-1">
-              <a
-                href="https://trk.ppdu.ru/click?uid=328338&oid=1248&erid=2SDnjekBvAd&sub1=lending&landingId=73&siteId=21430"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-brand-green text-white font-bold text-base px-8 py-4 rounded-2xl hover:bg-green-600 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-200"
-              >
-                ВкусВилл — Велокурьер
-              </a>
-              <span className="text-xs text-gray-400">Реклама · erid: 2SDnjekBvAd</span>
-            </div>
-            <div className="flex flex-col items-center gap-1">
-              <a
-                href="https://trk.ppdu.ru/click?uid=328338&oid=1248&erid=2SDnjekBvAd&sub1=lending&siteId=21430"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-brand-green text-white font-bold text-base px-8 py-4 rounded-2xl hover:bg-green-600 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-200"
-              >
-                ВкусВилл — Автокурьер
-              </a>
-              <span className="text-xs text-gray-400">Реклама · erid: 2SDnjekBvAd</span>
+          <div className="space-y-3 animate-fade-up delay-300">
+            <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest">Выбери партнёра и начни сегодня</p>
+            <div className="flex flex-wrap gap-3">
+              {PARTNER_LINKS.map((p) => (
+                <div key={p.id} className="flex flex-col gap-1">
+                  <a
+                    href={p.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative inline-flex items-center gap-3 bg-white border-2 rounded-2xl px-5 py-3.5 transition-all duration-200 hover:scale-105 hover:shadow-xl"
+                    style={{ borderColor: p.color }}
+                  >
+                    <span className="text-2xl">{p.icon}</span>
+                    <div className="text-left">
+                      <div className="text-xs font-medium text-gray-400 leading-none mb-0.5">{p.brand}</div>
+                      <div className="text-sm font-bold leading-none" style={{ color: p.color }}>{p.label}</div>
+                    </div>
+                    <Icon name="ArrowRight" size={16} className="ml-1 opacity-40 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" style={{ color: p.color }} />
+                  </a>
+                  <span className="text-[10px] text-gray-400 px-1">Реклама · erid: {p.erid}</span>
+                </div>
+              ))}
             </div>
           </div>
 
