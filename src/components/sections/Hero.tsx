@@ -57,7 +57,7 @@ export function HeroSection() {
             Работа курьером с гибким графиком, быстрыми выплатами и реальной поддержкой. Начни уже сегодня.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 animate-fade-up delay-300">
+          <div className="flex flex-wrap gap-4 animate-fade-up delay-300">
             <div className="flex flex-col items-center gap-1">
               <a
                 href="https://trk.ppdu.ru/click/Ux7hwE3U?erid=CQH36pWzJqVGXC5oLP8WVVNCNqJmbhiUPijGiu4zpwPd7G"
