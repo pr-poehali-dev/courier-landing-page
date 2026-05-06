@@ -26,12 +26,23 @@ export function CtaSection() {
               </div>
               <div className="flex flex-col items-center gap-1">
                 <a
-                  href="https://trk.ppdu.ru/click?uid=328338&oid=1248&erid=2SDnjekBvAd&siteId=21430"
+                  href="https://trk.ppdu.ru/click?uid=328338&oid=1248&erid=2SDnjekBvAd&sub1=lending&landingId=73&siteId=21430"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 bg-brand-green text-white font-bold text-base px-10 py-4 rounded-2xl hover:bg-green-500 transition-all hover:scale-105 shadow-xl shadow-green-900/30"
                 >
-                  Зарегистрироваться во ВкусВилл
+                  ВкусВилл — Велокурьер
+                </a>
+                <span className="text-xs text-gray-500">Реклама · erid: 2SDnjekBvAd</span>
+              </div>
+              <div className="flex flex-col items-center gap-1">
+                <a
+                  href="https://trk.ppdu.ru/click?uid=328338&oid=1248&erid=2SDnjekBvAd&sub1=lending&siteId=21430"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 bg-brand-green text-white font-bold text-base px-10 py-4 rounded-2xl hover:bg-green-500 transition-all hover:scale-105 shadow-xl shadow-green-900/30"
+                >
+                  ВкусВилл — Автокурьер
                 </a>
                 <span className="text-xs text-gray-500">Реклама · erid: 2SDnjekBvAd</span>
               </div>
