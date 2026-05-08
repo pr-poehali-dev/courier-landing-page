@@ -34,6 +34,28 @@ export function Navbar() {
   );
 }
 
+function PartnerCard({ p }: { p: typeof PARTNER_LINKS[number] }) {
+  return (
+    <div className="flex flex-col gap-1">
+      <a
+        href={p.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group relative inline-flex items-center gap-3 bg-white border-2 rounded-2xl px-5 py-3.5 transition-all duration-200 hover:scale-105 hover:shadow-xl"
+        style={{ borderColor: p.color }}
+      >
+        <span className="text-2xl">{p.icon}</span>
+        <div className="text-left">
+          <div className="text-xs font-medium text-gray-400 leading-none mb-0.5">{p.brand}</div>
+          <div className="text-sm font-bold leading-none" style={{ color: p.color }}>{p.label}</div>
+        </div>
+        <Icon name="ArrowRight" size={16} className="ml-1 opacity-40 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" style={{ color: p.color }} />
+      </a>
+      <span className="text-[10px] text-gray-400 px-1">Реклама · erid: {p.erid}</span>
+    </div>
+  );
+}
+
 export function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden mesh-bg pt-16">
@@ -58,28 +80,26 @@ export function HeroSection() {
             Работа курьером с гибким графиком, быстрыми выплатами и реальной поддержкой. Начни уже сегодня.
           </p>
 
-          <div className="space-y-3 animate-fade-up delay-300">
-            <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest">Выбери партнёра и начни сегодня</p>
-            <div className="flex flex-wrap gap-3">
-              {PARTNER_LINKS.map((p) => (
-                <div key={p.id} className="flex flex-col gap-1">
-                  <a
-                    href={p.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group relative inline-flex items-center gap-3 bg-white border-2 rounded-2xl px-5 py-3.5 transition-all duration-200 hover:scale-105 hover:shadow-xl"
-                    style={{ borderColor: p.color }}
-                  >
-                    <span className="text-2xl">{p.icon}</span>
-                    <div className="text-left">
-                      <div className="text-xs font-medium text-gray-400 leading-none mb-0.5">{p.brand}</div>
-                      <div className="text-sm font-bold leading-none" style={{ color: p.color }}>{p.label}</div>
-                    </div>
-                    <Icon name="ArrowRight" size={16} className="ml-1 opacity-40 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" style={{ color: p.color }} />
-                  </a>
-                  <span className="text-[10px] text-gray-400 px-1">Реклама · erid: {p.erid}</span>
-                </div>
-              ))}
+          <div className="space-y-4 animate-fade-up delay-300">
+            <div className="space-y-2">
+              <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest">Все регионы России</p>
+              <div className="flex flex-wrap gap-3">
+                {PARTNER_LINKS.filter((p) => !p.moscowOnly).map((p) => (
+                  <PartnerCard key={p.id} p={p} />
+                ))}
+              </div>
+            </div>
+
+            <div className="space-y-2">
+              <div className="inline-flex items-center gap-1.5 bg-rose-50 border border-rose-200 rounded-full px-3 py-1">
+                <Icon name="MapPin" size={12} className="text-rose-500" />
+                <p className="text-xs font-semibold text-rose-500">Только Москва и Московская область</p>
+              </div>
+              <div className="flex flex-wrap gap-3">
+                {PARTNER_LINKS.filter((p) => p.moscowOnly).map((p) => (
+                  <PartnerCard key={p.id} p={p} />
+                ))}
+              </div>
             </div>
           </div>
 
