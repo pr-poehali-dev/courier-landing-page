@@ -90,12 +90,12 @@ export function CalculatorSection() {
             {/* Platform switcher */}
             <div>
               <label className="font-semibold text-white text-sm mb-3 block">Платформа</label>
-              <div className="flex gap-3">
+              <div className="grid grid-cols-2 gap-2">
                 {PLATFORMS.map((p) => (
                   <button
                     key={p.id}
                     onClick={() => setPlatformId(p.id)}
-                    className="flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-2xl font-semibold text-sm transition-all duration-200"
+                    className="flex items-center justify-center gap-2 px-4 py-3 rounded-2xl font-semibold text-sm transition-all duration-200"
                     style={
                       platformId === p.id
                         ? { backgroundColor: p.color, color: "#fff", boxShadow: `0 4px 16px ${p.color}55` }
@@ -103,9 +103,16 @@ export function CalculatorSection() {
                     }
                   >
                     {p.label}
+                    {p.moscowOnly && <span className="text-[10px] opacity-70">🏙 МСК</span>}
                   </button>
                 ))}
               </div>
+              {platform.moscowOnly && (
+                <div className="mt-3 flex items-center gap-2 bg-rose-500/10 border border-rose-500/30 rounded-xl px-3 py-2">
+                  <Icon name="MapPin" size={13} className="text-rose-400 shrink-0" />
+                  <span className="text-xs text-rose-300">Оффер доступен только в Москве и Московской области</span>
+                </div>
+              )}
             </div>
 
             {/* Region */}

@@ -13,8 +13,10 @@ export const REGIONS = [
 
 // Коэффициенты платформ относительно base
 export const PLATFORMS = [
-  { id: "yandex",   label: "Яндекс Еда",  mult: 1.0,  color: "#F5620F", bg: "#FFF4EE" },
-  { id: "vkusvill", label: "ВкусВилл",    mult: 0.88, color: "#2DB356", bg: "#EDF9F1" },
+  { id: "yandex",   label: "Яндекс Еда", mult: 1.0,  color: "#F5620F", bg: "#FFF4EE", moscowOnly: false },
+  { id: "vkusvill", label: "ВкусВилл",   mult: 0.88, color: "#2DB356", bg: "#EDF9F1", moscowOnly: false },
+  { id: "samokat",  label: "Самокат",    mult: 0.95, color: "#7C3AED", bg: "#F5F3FF", moscowOnly: true  },
+  { id: "lenta",    label: "Лента",      mult: 0.90, color: "#B91C1C", bg: "#FEF2F2", moscowOnly: true  },
 ] as const;
 
 // Партнёрские ссылки на главном экране
