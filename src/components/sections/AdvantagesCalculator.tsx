@@ -51,8 +51,10 @@ export function CalculatorSection() {
   const [days, setDays] = useState(20);
   const [platformId, setPlatformId] = useState<PlatformId>("yandex");
 
-  const region = REGIONS[regionIdx];
   const platform = PLATFORMS.find((p) => p.id === platformId)!;
+  const visibleRegions = platform.moscowOnly ? REGIONS.slice(0, 1) : REGIONS;
+  const safeRegionIdx = platform.moscowOnly ? 0 : regionIdx;
+  const region = REGIONS[safeRegionIdx];
   // base = максимум (12ч × 28дней), считаем пропорционально выбранной нагрузке
   const maxHours = 12 * 28;
   const userHours = hours * days;
@@ -119,13 +121,13 @@ export function CalculatorSection() {
             <div>
               <label className="font-semibold text-white text-sm mb-3 block">Основные регионы работы</label>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-                {REGIONS.map((r, i) => (
+                {visibleRegions.map((r, i) => (
                   <button
                     key={r.name}
                     onClick={() => setRegionIdx(i)}
                     className="text-xs font-medium px-3 py-2.5 rounded-xl transition-all duration-200"
                     style={
-                      i === regionIdx
+                      i === safeRegionIdx
                         ? { backgroundColor: platform.color, color: "#fff", boxShadow: "0 2px 8px rgba(0,0,0,0.3)" }
                         : { backgroundColor: "rgba(255,255,255,0.05)", color: "#9ca3af", border: "1px solid rgba(255,255,255,0.1)" }
                     }
